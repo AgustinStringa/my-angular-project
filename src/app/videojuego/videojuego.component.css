@@ -1,0 +1,11 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.videojuego {
+  margin: 5rem;
+  padding: 1rem;
+  border: 1px dashed #dd0031;
+}
