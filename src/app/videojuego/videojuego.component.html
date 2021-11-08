@@ -3,15 +3,11 @@
   <span>Puntaje: {{ puntaje }}</span>
   <br />
   <button>Iniciar</button>
-  <button>Salir</button>
+  <button (click)="gameOver()">Salir</button>
 
-  <h3>lista de juegos populares</h3>
+  <h3>{{ titulo }}</h3>
+
   <ul>
-    <li>Minecraft</li>
-    <li>Grand Theft Auto</li>
-    <li>Pacman</li>
-    <li>Mario Bros</li>
-    <li>Doom eternal</li>
-    <li>Wonder Boy</li>
+    <button (click)="generarItems()">Cargar</button>
   </ul>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit, DoCheck} from "@angular/core";
 
 @Component({
     selector: 'Videojuego',
@@ -13,6 +13,43 @@ import { Component } from "@angular/core";
     // <span></span>
     // </div>`
 })
-export class VideojuegoComponent {
-    public puntaje:number = 0;
+export class VideojuegoComponent implements OnInit, DoCheck {
+    public puntaje:number;
+    public lista:Array<any>;
+    public titulo:String;
+
+    constructor(){
+        console.log('constructorrr');
+    this.puntaje  = 1000;
+    this.lista = ["Minecraft", "Grand Theft Auto", "Pacman", "Mario Bros", "Doom eternal", "Wonder Boy"];
+    this.titulo = 'Listado de videojuegos populares';
+    }
+
+    //metodos
+    public gameOver(){
+        this.puntaje = 0;
+    }
+
+    public generarItems(){
+        return this.lista.forEach(e => {
+            `<li>${e}</li>`
+        })
+    }
+
+    //HOOK
+    ngOnInit(): void {
+        console.log('on-init ejecutadoo');
+        setTimeout(()=> {
+           this.puntaje = 100; 
+        }, 5000);
+    }
+    //DO CHECK
+    ngDoCheck(): void {
+        console.log('DoCheck ejecutado');
+    }
+    
+
+
+
+
 }
