@@ -1,4 +1,4 @@
-<div class="videojuego">
+<div class="videojuego" *ngIf="visible">
   <h2>Este es el primer componente</h2>
   <span>Puntaje: {{ puntaje }}</span>
   <br />
@@ -7,7 +7,9 @@
 
   <h3>{{ titulo }}</h3>
 
-  <ul>
-    <button (click)="generarItems()">Cargar</button>
-  </ul>
+  <button (click)="generarItems()">Cargar</button>
+
+  <button (click)="alternarVisibilidad()">Eliminar componente</button>
 </div>
+
+<button (click)="alternarVisibilidad()" *ngIf="!visible">Mostrar</button>

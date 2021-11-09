@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck} from "@angular/core";
+import { Component, OnInit, DoCheck, OnDestroy} from "@angular/core";
 
 @Component({
     selector: 'Videojuego',
@@ -13,16 +13,18 @@ import { Component, OnInit, DoCheck} from "@angular/core";
     // <span></span>
     // </div>`
 })
-export class VideojuegoComponent implements OnInit, DoCheck {
+export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy {
     public puntaje:number;
     public lista:Array<any>;
     public titulo:String;
+    public visible:boolean;
 
     constructor(){
         console.log('constructorrr');
     this.puntaje  = 1000;
     this.lista = ["Minecraft", "Grand Theft Auto", "Pacman", "Mario Bros", "Doom eternal", "Wonder Boy"];
     this.titulo = 'Listado de videojuegos populares';
+    this.visible = true;
     }
 
     //metodos
@@ -36,7 +38,11 @@ export class VideojuegoComponent implements OnInit, DoCheck {
         })
     }
 
-    //HOOK
+    public alternarVisibilidad(){
+        this.visible = !this.visible;
+    }
+    //HOOKS
+
     ngOnInit(): void {
         console.log('on-init ejecutadoo');
         setTimeout(()=> {
@@ -47,8 +53,11 @@ export class VideojuegoComponent implements OnInit, DoCheck {
     ngDoCheck(): void {
         console.log('DoCheck ejecutado');
     }
+    //ON DESTROY
+    ngOnDestroy(): void {
+        console.log('onDestroy ejecutado');
+    }
     
-
 
 
 
