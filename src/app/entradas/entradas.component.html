@@ -1,0 +1,13 @@
+<div class="wrap-entradas" *ngFor="let element of entradas">
+  <div class="entrada">
+    <h2>{{ element.titulo }}</h2>
+    <p>{{ element.contenido }}</p>
+    <p>
+      <span>{{ element.fecha }}</span> -- <strong>{{ element.autor }}</strong>
+      <br />
+      <span>Comments: {{ element.cant_comments }}</span>
+    </p>
+
+    <img src="{{ element.src_img }}" alt="" />
+  </div>
+</div>

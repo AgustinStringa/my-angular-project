@@ -1,0 +1,9 @@
+.entrada {
+  padding: 1rem;
+  border: 1px solid gray;
+  margin: 1rem 5rem;
+}
+
+img {
+  max-width: 100%;
+}

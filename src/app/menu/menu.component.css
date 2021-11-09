@@ -1,0 +1,21 @@
+
+:root{
+  --background_color: {{background_color}}
+  --a_color: {{a_color}}
+}
+
+.menu {
+  padding: 1rem;
+}
+
+
+.menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.menu ul li {
+  display: block;
+  margin: 0 1rem;
+
+}
