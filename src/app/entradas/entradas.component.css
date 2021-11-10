@@ -7,3 +7,37 @@
 img {
   max-width: 100%;
 }
+
+input,
+label {
+  display: block;
+}
+
+form {
+  border: 1px solid #ccc;
+  margin: 1rem auto;
+  width: 70%;
+  padding: 1rem;
+}
+
+/*two way data binding*/
+.twdb {
+  padding: 1rem;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.twdb::before {
+  content: "TWO WAY DATA BINDIGN";
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.formulario::before {
+  content: "TWO WAY DATA BINDIGN CON OBJETOS";
+  text-decoration: underline;
+  font-size: 1rem;
+}
+.formulario {
+  font-size: 1.5rem;
+}

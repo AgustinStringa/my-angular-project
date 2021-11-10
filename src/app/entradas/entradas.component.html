@@ -1,6 +1,20 @@
 <section>
-  <div class="wrap-entradas" *ngFor="let element of entradas">
-    <div class="entrada">
+  <div class="wrap-entradas" *ngFor="let element of entradas; let ind = index">
+    <div
+      class="entrada"
+      *ngIf="
+        element.titulo &&
+        element.contenido &&
+        element.fecha &&
+        element.autor &&
+        element.cant_comments &&
+        element.src_img
+      "
+    >
+      <p>index {{ ind }}</p>
+      <div style="display: flex; justify-content: end; flex-direction: row">
+        <button (click)="eliminarEntrada(ind)">X</button>
+      </div>
       <h2
         [ngStyle]="{
           'text-transform': 'uppercase',
@@ -28,4 +42,59 @@
   </div>
 </section>
 
-<input type="number" name="" id="" [max]="entradas.length" />
+<section class="twdb">
+  <p>la propiedad es {{ nueva_propiedad }}</p>
+  <input
+    type="text"
+    [(ngModel)]="nueva_propiedad"
+    name=""
+    id=""
+    placeholder="nueva propiedad para la clase"
+  />
+
+  <p>la nueva propiedad es {{ nueva_propiedad }}</p>
+  <button (click)="getNuevaPropiedad()">Mostrar nueva propiedad</button>
+</section>
+
+<form action="" class="formulario">
+  <label for="">Titulo</label>
+  <input
+    [(ngModel)]="nueva_entrada.titulo"
+    name="titulo"
+    type="text"
+    id=""
+    placeholder="titulo para la nueva entrada"
+  />
+
+  <label for="">Contenido</label>
+  <input
+    [(ngModel)]="nueva_entrada.contenido"
+    type="text"
+    name="contenido"
+    id=""
+  />
+
+  <label for="">Fecha</label>
+  <input [(ngModel)]="nueva_entrada.fecha" type="text" name="fecha" id="" />
+
+  <label for="">Autor</label>
+  <input [(ngModel)]="nueva_entrada.autor" type="text" name="autor" id="" />
+
+  <label for="">Cantidad de comentarios</label>
+  <input
+    [(ngModel)]="nueva_entrada.cant_comments"
+    type="number"
+    name="number"
+    id=""
+  />
+
+  <label for="">Link de la imagen</label>
+  <input
+    [(ngModel)]="nueva_entrada.src_img"
+    type="text"
+    name="source_image"
+    id=""
+  />
+
+  <button (click)="agregarEntrada()">Agregar nueva entrada</button>
+</form>

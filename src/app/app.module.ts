@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//importacion para data binding
+import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
@@ -18,7 +21,9 @@ import { EntradasComponent } from './entradas/entradas.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //añadir modulo para data binding
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
