@@ -41,3 +41,18 @@ form {
 .formulario {
   font-size: 1.5rem;
 }
+
+.validate {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: yellowgreen;
+  color: green;
+  display: block;
+}
+.novalidate {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgb(155, 14, 14);
+  color: red;
+  display: block;
+}

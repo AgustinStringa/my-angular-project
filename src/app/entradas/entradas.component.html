@@ -45,12 +45,32 @@
 <section class="twdb">
   <p>la propiedad es {{ nueva_propiedad }}</p>
   <input
+    (input)="inputtwdb()"
     type="text"
     [(ngModel)]="nueva_propiedad"
     name=""
-    id=""
-    placeholder="nueva propiedad para la clase"
+    id="input-nueva-propiedad"
+    placeholder="nuevo valor para la propiedad de la clase"
   />
+
+  <span
+    class="mensaje_alerta"
+    *ngIf="nueva_propiedad"
+    [class.validate]="nueva_propiedad.length >= 5"
+    [class.novalidate]="
+      nueva_propiedad.length > 1 && nueva_propiedad.length < 5
+    "
+  ></span>
+
+  <span
+    *ngIf="nueva_propiedad"
+    [ngClass]="{
+      validate: nueva_propiedad.length >= 5,
+      novalidate: !(nueva_propiedad.length >= 5)
+    }"
+    >Este es otro mensaje de alerta que funciona en paralelo usando
+    [ngClass]</span
+  >
 
   <p>la nueva propiedad es {{ nueva_propiedad }}</p>
   <button (click)="getNuevaPropiedad()">Mostrar nueva propiedad</button>

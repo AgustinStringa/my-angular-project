@@ -14,7 +14,7 @@ export class EntradasComponent implements OnInit {
   constructor() {
     this.nueva_entrada = new Entrada('','','','',0,'');
     //valor inicial para propiedad de two way data binding
-    this.nueva_propiedad = 'hello there'
+    
     this.entradas = [
       new Entrada('primera entrada de blog',
       'kajsdbkajsbdjaksbdjkasbd','9-11-2021','Agustin Stringa',27,
@@ -47,6 +47,25 @@ export class EntradasComponent implements OnInit {
   eliminarEntrada(index:number){
     this.entradas.splice(index, 1);
     //this.entradas[index] = new Entrada('','','','',0,'');
+  }
+
+  //evento input en input
+  inputtwdb(){
+    //let input= (<HTMLInputElement>document.querySelector('#input-nueva-propiedad'));
+    let mensaje = (<HTMLInputElement>document.querySelector('.mensaje_alerta'));
+    let cadena = this.nueva_propiedad;
+    
+    
+    if (cadena && mensaje){
+      if(cadena.length >= 5 ){
+
+        mensaje.textContent = 'La longitud de la cadena es correcta';
+      } else {    
+          mensaje.textContent = 'La longitud de la cadena debe ser igual o mayor a 5';
+      }
+    } else {
+      
+    }
   }
 
 }
