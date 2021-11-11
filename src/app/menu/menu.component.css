@@ -19,3 +19,8 @@
   margin: 0 1rem;
 
 }
+
+/*enlace activo en el menu*/
+.activeAnchor{
+  border: 1px dashed black;
+}

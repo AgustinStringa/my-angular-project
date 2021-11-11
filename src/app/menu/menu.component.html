@@ -1,10 +1,30 @@
-<p>menu works!</p>
 <section class="menu">
   <h3>{{ title }}</h3>
-  <ul>
-    <li [ngStyle]="{ backgroundColor: a_color }">{{ enlaces[0] }}</li>
-    <li [ngStyle]="{ backgroundColor: a_color }">{{ enlaces[1] }}</li>
-    <li [ngStyle]="{ backgroundColor: a_color }">{{ enlaces[2] }}</li>
-    <li [ngStyle]="{ backgroundColor: a_color }">{{ enlaces[3] }}</li>
-  </ul>
+  <nav>
+    <ul>
+      <li>
+        <a class="button" routerLink="/blog" routerLinkActive="activeAnchor"
+          >Blog</a
+        >
+      </li>
+      <li>
+        <a
+          class="button"
+          routerLink="/videojuegos"
+          routerLinkActive="activeAnchor"
+          >Videojuegos</a
+        >
+      </li>
+      <li>
+        <a class="button" routerLink="/cursos" routerLinkActive="activeAnchor"
+          >Cursos</a
+        >
+      </li>
+      <li>
+        <a class="button" routerLink="/home" routerLinkActive="activeAnchor"
+          >Home</a
+        >
+      </li>
+    </ul>
+  </nav>
 </section>
