@@ -15,7 +15,10 @@ const appRoutes:Routes = [
     {path:'blog', component:EntradasComponent},
     {path:'videojuegos', component:VideojuegoComponent},
     {path:'cursos', component:CursosComponent},
-    {path: '**', component:AppComponent}
+    //creando rutas para manipular parametros
+    {path:'cursos/:nombre/:apellido', component:CursosComponent},
+
+    {path: '**', component:HomeComponent}
 
 ];
 export const appRoutingProviders:any[] = [];

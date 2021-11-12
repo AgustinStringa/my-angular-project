@@ -1,0 +1,8 @@
+.datos {
+  padding: 1rem;
+  border: 1px dashed #333;
+}
+
+.datos::before {
+  content: "Datos llegados por param: ";
+}
