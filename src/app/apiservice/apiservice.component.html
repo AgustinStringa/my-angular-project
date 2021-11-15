@@ -1,0 +1,18 @@
+<div class="wrap-general">
+  <div *ngFor="let pais of paises" class="wrap-country">
+    <h3>{{ pais.name.common }}</h3>
+    <h5>{{ pais.capital }}</h5>
+
+    <p>Subregion: {{ pais.subregion }}</p>
+    <p>Area: {{ pais.area }}m2</p>
+
+    <p>Independiente: {{ pais.independent }}</p>
+    <p>Cantidad de habitantes: {{ pais.population }}</p>
+
+    <h2>Lenguajes:</h2>
+    <ul *ngFor="let lan of pais.languages | keyvalue">
+      <li>{{ lan.value }}</li>
+    </ul>
+    <img src="{{ pais.flags.png }}" alt="" />
+  </div>
+</div>

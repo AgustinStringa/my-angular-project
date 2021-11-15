@@ -1,0 +1,10 @@
+.wrap-country {
+  padding: 1rem;
+  border: 1px dashed black;
+  margin: 1rem;
+}
+
+.wrap-general {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

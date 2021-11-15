@@ -13,6 +13,7 @@ import { EntradasComponent } from './entradas/entradas.component';
 //importacion para rutas
 import { routing, appRoutingProviders } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { ApiserviceComponent } from './apiservice/apiservice.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     CursosComponent,
     MenuComponent,
     EntradasComponent,
-    HomeComponent
+    HomeComponent,
+    ApiserviceComponent,
   ],
   imports: [
     BrowserModule,
