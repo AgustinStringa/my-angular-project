@@ -14,6 +14,10 @@ import { EntradasComponent } from './entradas/entradas.component';
 import { routing, appRoutingProviders } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { ApiserviceComponent } from './apiservice/apiservice.component';
+import { ShowsComponent } from './shows/shows.component';
+
+//importaciones para peticiones
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -25,6 +29,7 @@ import { ApiserviceComponent } from './apiservice/apiservice.component';
     EntradasComponent,
     HomeComponent,
     ApiserviceComponent,
+    ShowsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,9 @@ import { ApiserviceComponent } from './apiservice/apiservice.component';
     //añadir modulo para data binding
     FormsModule,
     //modulo para rutas
-    routing
+    routing,
+    //importacion para peticiones
+    HttpClientModule
   ],
   providers: [
     //servicio para rutas

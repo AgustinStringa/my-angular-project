@@ -1,0 +1,11 @@
+<div *ngIf="shows" class="wrap-shows">
+  <div *ngFor="let show of shows">
+    <h2>{{ show.name }}</h2>
+    <img src="{{ show.image.medium }}" alt="" />
+    <p>Status {{ show.status }}</p>
+    <p>id {{ show.id }}</p>
+    <a href="{{ show.url }}">Enlace</a>
+
+    <button (click)="loadEpisodeList(show.id)">Lista de episodios</button>
+  </div>
+</div>
