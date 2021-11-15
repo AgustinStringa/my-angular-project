@@ -1,10 +1,13 @@
 <section>
   <h1>COMPONENTE HOME</h1>
   <label for="">Introduce tu nombre</label>
-  <input (input)="almacenar_valor()" type="text" id="nombre_cur" />
-  <a [routerLink]="['/cursos', nombre_cur, 'stringa']">
+  <input type="text" id="nombre_cur" />
+  <label for="">Introduce tu apellido</label>
+  <input type="text" id="apellido_cur" />
+
+  <!-- <a [routerLink]="['/cursos', nombre_cur, 'stringa']">
     <button type="submit">Ir a cursos (error)</button>
-  </a>
+  </a> -->
 
   <button (click)="redireccionar()">Redireccionar</button>
 

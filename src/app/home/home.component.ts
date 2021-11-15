@@ -9,25 +9,31 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   public nombre_cur:String;
+  public apellido_cur:String;
 
   constructor(
     
     private _router: Router
   ) { 
     this.nombre_cur = '';
+    this.apellido_cur = '';
+
+
   }
 
   ngOnInit(): void {
   }
 
-  almacenar_valor(){
-    var input_cur = <HTMLInputElement>(document.querySelector('#nombre_cur'));
-    this.nombre_cur = input_cur.value;
-    console.log(this.nombre_cur);
-  }
+
 
   redireccionar(){
-    this._router.navigate(['/cursos', this.nombre_cur, 'ariosti'])
+    var input_cur = <HTMLInputElement>(document.querySelector('#nombre_cur'));
+    this.nombre_cur = input_cur.value;
+    var input_apellido_cur = <HTMLInputElement>(document.querySelector('#apellido_cur'));
+    this.apellido_cur = input_apellido_cur.value;
+
+
+    this._router.navigate(['/cursos', this.nombre_cur, this.apellido_cur])
   }
   
 

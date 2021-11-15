@@ -1,12 +1,22 @@
 <menu></menu>
 
-<div *ngIf="nombre_cur && apellido_cur" class="datos">
+<div *ngIf="login; then login_true; else login_false" class="datos"></div>
+
+<ng-template #login_true>
   <h2>Nombre: {{ nombre_cur }}</h2>
   <h2>Apellido: {{ apellido_cur }}</h2>
-</div>
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JS</li>
-  <li>PYTHON</li>
-</ul>
+  <h3>Cursos disponibles:</h3>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JS</li>
+    <li>PYTHON</li>
+  </ul>
+  <button (click)="logout()">Logout</button>
+</ng-template>
+
+<ng-template #login_false>
+  <p>No has iniciado sesion para ver tus cursos</p>
+  <p>Pulsa aqui para registrate y verlos</p>
+  <a class="button" routerLink="/home" routerLinkActive="activeAnchor">Home</a>
+</ng-template>

@@ -9,6 +9,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class CursosComponent implements OnInit {
   public nombre_cur:string;
   public apellido_cur:string;
+  public login:boolean;
   
 
 
@@ -18,6 +19,7 @@ export class CursosComponent implements OnInit {
   ) { 
     this.nombre_cur = '';
     this.apellido_cur= '';
+    this.login = false;
 
   }
 
@@ -32,14 +34,20 @@ export class CursosComponent implements OnInit {
 
         //comprobar que los params no lleguen vacios
         if(this.nombre_cur && this.apellido_cur){
-             
+            this.login = true;
+            console.log('REGISTRADO EN LA PAGINA');
         } else {
-             
-        this._router.navigate(['/home'])
-
+            console.log('NOOOO REGISTRADO EN LA PAGINA');            
         }
 
       })
   }
 
+  logout(){
+    this.apellido_cur = '';
+    this.nombre_cur = '';
+    this.login = false;
+    setTimeout(()=> {this._router.navigate(['/home'])
+  }, 3000)
+  }
 }
