@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 .wrap-shows {
   padding: 1rem;
   margin: 0 auto;
@@ -13,8 +18,29 @@
   background-color: #ccc;
   border: 1px ridge #333;
   transition: all 0.3s ease-in-out;
+  padding: 1rem;
 }
 
 .wrap-shows > *:hover {
   transform: scale(1.1, 1.1);
+}
+
+@keyframes rotar {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.reloj {
+  width: 100px;
+  display: block;
+  font-size: 5rem;
+  animation-duration: 5s;
+  animation-name: rotar;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }

@@ -10,18 +10,30 @@ import { ShowService } from '../services/show.service';
 })
 export class ShowsComponent implements OnInit {
 public shows:any;
+public cargando:boolean;
   constructor(
     private _showService: ShowService
     
   ) { 
-    
+    this.cargando = false;
   }
 
   ngOnInit(): void {
-    this._showService.getShows().subscribe(
-      result => {this.shows = result;
-      console.log(this.shows);
+    
+  }
+
+  cargarShows(){
+    this.cargando = true;
+    setTimeout(() => {
+      this._showService.getShows().subscribe(
+      result => {
+        this.shows = result;
+        this.cargando = false;
+        console.log(this.shows);
       })
+    }, 5000)
+
+    
   }
 
   loadEpisodeList(id:number){
