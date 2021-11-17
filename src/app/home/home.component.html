@@ -16,3 +16,19 @@
   <br />
   <menu></menu>
 </section>
+
+<section class="pipes">
+  <p>Trabajando con pipes</p>
+  <p>{{ fecha | date }}</p>
+  <p>Fc {{ fecha | date: "fullDate" | uppercase }}</p>
+  <p>{{ currency | currency: "USD" }}</p>
+  <p>{{ currency | currency: "EUR":"Euros " }}</p>
+  <p>{{ [1, 2, 3, 4, 5, 6, 7, 8] | slice: 1:5 }}</p>
+</section>
+
+<section class="pipe-personalizada">
+  <h2>Utilizando una pipe personalizada</h2>
+
+  <p>{{ 2 | calc: "*45" }}</p>
+  <p>{{ 2 | calc: "/8" }}</p>
+</section>

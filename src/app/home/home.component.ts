@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   public nombre_cur:String;
   public apellido_cur:String;
+  public fecha:Date;
+  public currency:any;
 
   constructor(
     
@@ -17,7 +19,8 @@ export class HomeComponent implements OnInit {
   ) { 
     this.nombre_cur = '';
     this.apellido_cur = '';
-
+    this.fecha = new Date();
+    this.currency = 180;
 
   }
 

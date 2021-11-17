@@ -18,6 +18,8 @@ import { ShowsComponent } from './shows/shows.component';
 
 //importaciones para peticiones
 import {HttpClientModule} from '@angular/common/http';
+//importando pipe personalizada
+import { CalculatorPipe } from './pipes/calculadora.pipe';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     ApiserviceComponent,
     ShowsComponent,
+    //importando pipe personalizada
+    CalculatorPipe
   ],
   imports: [
     BrowserModule,
