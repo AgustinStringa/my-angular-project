@@ -1,0 +1,12 @@
+<label for="hero-name">New hero name: </label>
+<input
+  type="text"
+  #box
+  id="hero-name"
+  (keyup.enter)="addHero(box.value); box.value = ''"
+  placeholder="hero name"
+/>
+<button (click)="reset()">Reset list of heroes</button>
+<div *ngFor="let hero of heroes | flyingHeroes">
+  {{ hero.name }}
+</div>
