@@ -8,7 +8,9 @@
     <p>id {{ show.id }}</p>
     <a href="{{ show.url }}">Enlace</a>
 
-    <button (click)="loadEpisodeList(show.id)">Lista de episodios</button>
+    <button (click)="toEpisodeList(show.id, show.name)">
+      Lista de episodios
+    </button>
   </div>
 </div>
 

@@ -9,6 +9,7 @@ export class SomethingService{
     }
 
     getPaises(){
+        //retorna una promise
         return fetch(this.urlApi).then(data => data.json())        
     }
 }

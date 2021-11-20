@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { CalculatorPipe } from './pipes/calculadora.pipe';
 import { FlyingHeroesComponent } from './flying-heroes/flying-heroes.component';
 import { FlyingHeroesPipe } from './pipes/flying-heroes-pipes';
+import { EpisodiosComponent } from './episodios/episodios.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { FlyingHeroesPipe } from './pipes/flying-heroes-pipes';
     //importando pipe personalizada
     CalculatorPipe,
     FlyingHeroesComponent,
-    FlyingHeroesPipe
+    FlyingHeroesPipe,
+    EpisodiosComponent
   ],
   imports: [
     BrowserModule,

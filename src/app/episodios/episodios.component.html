@@ -1,0 +1,21 @@
+<h1>{{ name_show }}</h1>
+
+<h3>Lista de episodios, demás datos</h3>
+
+<div *ngIf="list">
+  <ul *ngFor="let episode of list">
+    <h3>{{ episode.name }}</h3>
+
+    <h4>Temporada: {{ episode.season }}</h4>
+    <ul>
+      <li>Fecha de salida: {{ episode.airdate }}</li>
+      <li><img src="{{ episode.image.medium }}" alt="" /></li>
+      <li>Rating: {{ episode.rating }}</li>
+      <li>Duracion: {{ episode.runtime }}</li>
+      <li>
+        Descripcion:
+        {{ episode.summary }}
+      </li>
+    </ul>
+  </ul>
+</div>

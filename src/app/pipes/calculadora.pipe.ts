@@ -12,11 +12,11 @@ export class CalculatorPipe implements PipeTransform{
      */
 
     transform(value: any, condiciones:string) {
-        console.log('ejecutando pipe');
+        //console.log('ejecutando pipe');
         let operador = condiciones[0];
         let operando:number = parseInt(condiciones.slice(1,condiciones.length))
-        console.log(operador);
-        console.log(operando);
+        //console.log(operador);
+        //console.log(operando);
         
         switch (operador){
             case '+':

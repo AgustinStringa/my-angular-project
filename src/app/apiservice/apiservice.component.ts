@@ -18,6 +18,7 @@ export class ApiserviceComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    //recibe la promesa enviada desde el servicio
     this._somethingService.getPaises().then(data => {
       this.paises = data;
     })

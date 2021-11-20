@@ -8,6 +8,7 @@ import { CursosComponent } from "./cursos/cursos.component";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { ShowsComponent } from "./shows/shows.component";
+import { EpisodiosComponent } from "./episodios/episodios.component";
 
 //array para rutas
 const appRoutes:Routes = [
@@ -19,6 +20,7 @@ const appRoutes:Routes = [
     //creando rutas para manipular parametros
     {path:'cursos/:nombre/:apellido', component:CursosComponent},
     {path:'shows', component:ShowsComponent},
+    {path:'shows/:nombre/episodios/:id_show', component:EpisodiosComponent},
 
     {path: '**', component:HomeComponent}
 

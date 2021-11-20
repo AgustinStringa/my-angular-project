@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShowService } from '../services/show.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -12,7 +14,9 @@ export class ShowsComponent implements OnInit {
 public shows:any;
 public cargando:boolean;
   constructor(
-    private _showService: ShowService
+    private _showService: ShowService,
+    private _router: Router
+
     
   ) { 
     this.cargando = false;
@@ -31,15 +35,14 @@ public cargando:boolean;
         this.cargando = false;
         console.log(this.shows);
       })
-    }, 5000)
+    }, 1000)
 
     
   }
 
-  loadEpisodeList(id:number){
-    this._showService.getListEpisodes(id).subscribe(
-      result => console.log(result)
-    )
+  toEpisodeList(id:number, name:string){
+    //IMPORTANTE SINTAXIS PARA PASAR PARAMETROS INTERCALADOS
+    this._router.navigate(['/shows', name, 'episodios', id])
   }
 
 }

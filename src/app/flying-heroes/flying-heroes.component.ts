@@ -22,7 +22,7 @@ export class FlyingHeroesComponent implements OnInit {
     if (!name) { return; }
     const hero = {name, canFly: this.canFly};
     this.heroes.push(hero);
-    console.log(this.heroes);
+    //console.log(this.heroes);
   }
 
   reset() { this.heroes = []; }
