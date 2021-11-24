@@ -1,11 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 
 :root{
-  --background_color: {{background_color}}
+  /*--background_color: {{background_color}}*/
   --a_color: {{a_color}}
 }
 
-.menu {
-  padding: 1rem;
+*,*::after,*::before {
+  box-sizing: border-box;
 }
 
 
@@ -13,14 +17,32 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 .menu ul li {
   display: block;
-  margin: 0 1rem;
+  flex-basis: 20%;
+  text-align: center;
+  flex-grow: 1;
+  padding: 1rem;
+  color: whitesmoke;
+  background-color: #46454a;
+  cursor: pointer;
+}
 
+.menu ul li:hover{
+  background-color: rgb(22, 22, 22)!important;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  color: wheat;
+  text-transform: uppercase;
 }
 
 /*enlace activo en el menu*/
 .activeAnchor{
-  border: 1px dashed black;
+  background-color: rgb(129, 129, 129)!important;
 }
